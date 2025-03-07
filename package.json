@@ -14,6 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "bootstrap": "^5.3.3",
     "color.js": "^1.2.0",
+    "fast-average-color": "^9.4.0",
     "node-sass": "^9.0.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",

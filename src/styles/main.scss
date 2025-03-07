@@ -1,0 +1,57 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+body {
+  margin: 0;
+  max-height: 100dvh;
+  background-color: black;
+}
+
+@import "./common/common1";
+@import "./components/common2";
+@import "./pages/common3";
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  padding: 32px;
+  height: 100dvh;
+  .app-row {
+    width: 100%;
+    display: flex;
+    .main-content {
+      width: 30%;
+    }
+  }
+}

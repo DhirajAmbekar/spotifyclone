@@ -1,0 +1,94 @@
+.music-player-container {
+  padding: 50px 0 0 157px;
+  width: 50%;
+  .music-player-section {
+    display: flex;
+    flex-direction: column;
+    .music-player-title {
+      @include f32(700);
+      color: var(--white);
+      margin: 0 0 8px 0;
+    }
+    .music-player-artistname {
+      @include f16(400);
+      color: var(--white);
+      opacity: 0.6;
+    }
+    img {
+      height: 480px;
+      width: 480px;
+      border-radius: 8px;
+      margin: 40px auto 0 auto;
+    }
+    .progress {
+      height: 10px;
+      margin: 24px 0 0 0;
+      background-color: #ffffff14;
+      border-radius: 16px;
+      width: 100%;
+      overflow: hidden;
+      .progress-bar {
+        height: 100%;
+        background-color: var(--white);
+        width: 100%;
+      }
+    }
+    .music-player-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 40px 0 0 0;
+      > div {
+        height: 48px;
+        width: 48px;
+        border-radius: 100px;
+        background-color: #ffffff14;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        .volume-bar-container {
+          position: absolute;
+          top: -50px;
+          left: 0px;
+          background-color: #ffffff14;
+          border-radius: 8px;
+          padding: 8px;
+          transform: rotate(-90deg);
+
+          .volume-bar {
+            height: 10px;
+            background-color: var(--white);
+            border-radius: 8px;
+            width: 100px;
+          }
+        }
+      }
+      .menu-container {
+        position: relative;
+        .menu {
+          position: absolute;
+          top: 50px;
+          right: 0;
+          background-color: #ffffff14;
+          border-radius: 8px;
+          padding: 8px;
+          display: flex;
+          flex-direction: column;
+          .menu-item {
+            padding: 8px 16px;
+            cursor: pointer;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 0 10px;
+            &:hover {
+              background-color: #ffffff1f;
+            }
+          }
+        }
+      }
+    }
+  }
+}

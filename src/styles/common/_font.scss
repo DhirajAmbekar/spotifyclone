@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "BasierCircle";
+  src: url("./fonts/BasierCircle-Regular.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin BC() {
+  font-family: "BasierCircle";
+}
+body {
+  font-family: "BasierCircle";
+}
+$const_font_weight: 400;
+
+@mixin font_generator($font_size, $line_height, $weight) {
+  --fs: #{desktop_length($font_size)};
+  font-size: calc($font_size * 1px);
+  line-height: calc($line_height * 1%);
+  font-weight: $weight;
+  @include mobile {
+    --fs: #{mobile_length($font_size)};
+    --lh: #{mobile_length($line_height)};
+    font-size: calc($font_size * 1px);
+    line-height: calc($line_height * 1%);
+  }
+}
+
+@mixin f32($weight: $const_font_weight) {
+  @include font_generator(32, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f18($weight: $const_font_weight) {
+  @include font_generator(18, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f16($weight: $const_font_weight) {
+  @include font_generator(16, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f14($weight: $const_font_weight) {
+  @include font_generator(14, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}

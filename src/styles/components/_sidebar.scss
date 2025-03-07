@@ -1,0 +1,31 @@
+.sidebar {
+  width: fit-content;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 100;
+  transition: all 0.3s;
+  margin: 0 96px 0 0;
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .logo {
+      margin: 0 0 28px 0;
+      width: fit-content;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0 24px 0;
+      opacity: 0.4;
+      width: fit-content;
+      &.active {
+        opacity: 1;
+      }
+    }
+    .profile_img{
+        margin: auto 0 0 0;
+        width: fit-content;
+    }
+  }
+}
